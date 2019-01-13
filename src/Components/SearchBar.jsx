@@ -9,15 +9,17 @@ const Input = styled.input.attrs({
     // margin: props => props.size || "1em",
     // padding: props => props.size || "1em"
   })`
-    color: black;
+    box-shadow: 0 0px 2px 0px 
+    color: white;
     font-size: 1em;
-    border: 2px solid black;
+    background: transparent;
+    border: none;
+    
     border-radius: 3px;
     justify: center;
+    outline: none;
   
-    /* here we use the dynamically computed props */
-    margin: ${props => props.margin};
-    padding: ${props => props.padding};
+    border-radius: 10px;
   `;
 
   

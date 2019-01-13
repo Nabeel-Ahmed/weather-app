@@ -164,6 +164,7 @@ export default class homePage extends Component {
           }
           min={this.state.main.temp_min}
           max={this.state.main.temp_max}
+          
         />
 
         <SearchBar
