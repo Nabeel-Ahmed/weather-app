@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 const Headings = styled.h2`
   color: white;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
   transition: 0.3s;
   width: 400px;
   margin: auto;
-  border-radius: 10px;
+  
   padding: 10px;
 `;
 
@@ -35,11 +35,7 @@ export default props => {
         <Temp>
         {props.temp} °
         </Temp>
-
-
-        {props.location}
         <br />
-        {props.temp} °
         <img src={props.icon} alt="icon" />
         <p>
           {" "}

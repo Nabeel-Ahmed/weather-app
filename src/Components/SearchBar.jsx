@@ -27,7 +27,7 @@ const Input = styled.input.attrs({
 export default function SearchBar(props) {
   return (
     <div>
-         <Input placeholder="City, Country" 
+         <Input placeholder="Enter a city" 
          size="2em" 
          name={props.name}
          value={props.value}

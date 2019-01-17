@@ -3,10 +3,24 @@ import axios from "axios";
 import WeatherCard from "./../Components/weatherCard";
 import styled from "styled-components";
 import SearchBar from "./../Components/SearchBar";
-import { throws } from "assert";
+// import { throws } from "assert";
+
 
 //components
 import SimpleView from "./../Components/SimpleView";
+import CardBackground from './../Components/CardBackground';
+
+const BackGround = styled.div`
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 600px;
+  
+`;
 
 export default class homePage extends Component {
   state = {
@@ -154,6 +168,23 @@ export default class homePage extends Component {
           }
           alt="icon"
         /> */}
+
+        {/* <SimpleView
+          location={this.state.name}
+          temp={this.state.main.temp}
+          icon={
+            "http://openweathermap.org/img/w/" +
+            this.state.weather.icon +
+            ".png"
+          }
+          min={this.state.main.temp_min}
+          max={this.state.main.temp_max}
+          value={this.state.search}
+          onChange={this.handleChange}
+          onKeyDown={this.handleKeyDown}
+        /> */}
+        <BackGround>
+
         <SimpleView
           location={this.state.name}
           temp={this.state.main.temp}
@@ -164,7 +195,6 @@ export default class homePage extends Component {
           }
           min={this.state.main.temp_min}
           max={this.state.main.temp_max}
-          
         />
 
         <SearchBar
@@ -172,7 +202,10 @@ export default class homePage extends Component {
           value={this.state.search}
           onChange={this.handleChange}
           onKeyDown={this.handleKeyDown}
-        />
+          /> 
+          </BackGround>
+        
+        
       </div>
     );
   }
